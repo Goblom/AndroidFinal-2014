@@ -64,6 +64,10 @@ public class DataUtils {
             msg += "Salary Required";
         }
 
+        if (player.getSalary() > 50000) {
+            msg += "Salary cannot be higher then 50,000";
+        }
+
         if (!msg.isEmpty()) {
             AlertDialogFrag frag = new AlertDialogFrag();
                             frag.setTitle("Please Check...");
