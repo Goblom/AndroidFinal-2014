@@ -47,7 +47,7 @@ public class ToastBuilder {
         }
 
         if (margin != null) {
-            toast.setMargin(margin.horizontal, margin.verticlal);
+            toast.setMargin(margin.horizontal, margin.vertical);
         }
 
         return toast;
@@ -69,11 +69,11 @@ public class ToastBuilder {
     }
 
     class Margin {
-        final float horizontal, verticlal;
+        final float horizontal, vertical;
 
-        private Margin(float horizontal, float verticlal) {
+        private Margin(float horizontal, float vertical) {
             this.horizontal = horizontal;
-            this.verticlal = verticlal;
+            this.vertical = vertical;
         }
     }
 
