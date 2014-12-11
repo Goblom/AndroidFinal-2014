@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
 
     Spinner playerSpinner, positionSpinner, rankSpinner;
     EditText txtName, txtSalary;
-    TextView txtRank, txtPosition, txtHireDate;
+    TextView txtHireDate;
 
     private final List<Player> players = new ArrayList();
 
@@ -116,9 +116,6 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
             if (str == "Name") {
                 editText.setInputType(InputType.TYPE_CLASS_TEXT);
                 txtName = editText;
-            } else if (str == "Rank") {
-                editText.setTextAppearance(this, android.R.style.Widget_EditText);
-                txtRank = editText;
             } else if (str == "Hire Date") {
                 editText.setTextAppearance(this, android.R.style.Widget_EditText);
                 editText.setOnClickListener(new View.OnClickListener() {
@@ -128,9 +125,6 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
                     }
                 });
                 txtHireDate = editText;
-            } else if (str == "Position") {
-                editText.setTextAppearance(this, android.R.style.Widget_EditText);
-                txtPosition = editText;
             } else if (str == "Salary") {
                 editText.setInputType(InputType.TYPE_CLASS_NUMBER);
                 txtSalary = editText;
@@ -167,9 +161,7 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
 
         currentPlayer = player.getId();
         txtName.setText(player.getName());
-//        txtRank.setText(String.valueOf(player.getRank())); // We comment this cause it is now null
         txtHireDate.setText(player.getHireDate());
-//        txtPosition.setText(String.valueOf(player.getPosition())); // We comment this cause it is now null
         txtSalary.setText(String.valueOf(player.getSalary()));
 
         positionSpinner.setSelection(player.getPosition() - 1);
