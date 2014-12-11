@@ -265,7 +265,8 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
             player.setPosition(positionSpinner.getSelectedItemPosition() + 1);
             player.setSalary(DataUtils.stringToInt(txtSalary.getText().toString()));
         } else if (title == "Discard") {
-
+            // This is not implemented server-side
+            // Do nothing... Contact teacher about it before turning in assignment
         } else if (title == "New") {
             currentPlayer = 0;
             txtName.setText("");
