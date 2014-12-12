@@ -270,7 +270,7 @@ public class MainActivity extends Activity implements HttpSuccessListener, TimeF
         }
 
         if (player != null) {
-            ToastBuilder.builder().setText("Insert: " + insert + "\nUpdate: " + update).show(this);
+//            ToastBuilder.builder().setText("Insert: " + insert + "\nUpdate: " + update).show(this);
             if (DataUtils.isPlayerValid(this, player)) {
                 if (insert) {
                     ToastBuilder.builder().setText("Inserting Player...").show(this);

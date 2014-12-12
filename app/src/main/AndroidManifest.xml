@@ -9,16 +9,24 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- SplashScreen -->
         <activity
-            android:name="bryan.lars.bbapp14.MainActivity"
+            android:name=".SplashScreen"
             android:label="@string/app_name"
-            android:configChanges="orientation|screenSize">
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name="bryan.lars.bbapp14.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" />
     </application>
 
 </manifest>
